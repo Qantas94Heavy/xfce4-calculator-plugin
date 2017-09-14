@@ -396,8 +396,8 @@ static void calc_configure(XfcePanelPlugin *plugin, CalcPlugin *calc)
     toplevel = gtk_widget_get_toplevel(GTK_WIDGET(plugin)); 
     dialog = xfce_titled_dialog_new_with_buttons(_("Calculator Plugin"),
                        GTK_WINDOW(toplevel),
-                       GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_NO_SEPARATOR,
-                       GTK_STOCK_CLOSE, GTK_RESPONSE_OK, NULL);
+                       GTK_DIALOG_DESTROY_WITH_PARENT,
+                       "gtk-close", GTK_RESPONSE_OK, NULL);
 
     gtk_window_set_position(GTK_WINDOW(dialog), GTK_WIN_POS_CENTER);
     gtk_window_set_icon_name(GTK_WINDOW(dialog), "xfce4-calculator-plugin");
