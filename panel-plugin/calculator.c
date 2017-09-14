@@ -223,7 +223,7 @@ static CalcPlugin *calc_new(XfcePanelPlugin *plugin)
     calc->ebox = gtk_event_box_new();
     gtk_widget_show(calc->ebox);
 
-    calc->hvbox = xfce_hvbox_new(orientation, FALSE, 2);
+    calc->hvbox = gtk_box_new(orientation, 2);
     gtk_widget_show(calc->hvbox);
     gtk_container_add(GTK_CONTAINER(calc->ebox), calc->hvbox);
 
@@ -416,7 +416,7 @@ static void calc_configure(XfcePanelPlugin *plugin, CalcPlugin *calc)
 	gtk_box_pack_start(GTK_BOX(GTK_DIALOG(dialog)->vbox), frame, TRUE, TRUE, 0);
 	gtk_widget_show(frame);
 
-	hbox = gtk_hbox_new(FALSE, 8);
+	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
 	gtk_container_add(GTK_CONTAINER (bin), hbox);
 	gtk_widget_show(hbox);
 
@@ -439,7 +439,7 @@ static void calc_configure(XfcePanelPlugin *plugin, CalcPlugin *calc)
     gtk_box_pack_start(GTK_BOX(GTK_DIALOG(dialog)->vbox), frame, TRUE, TRUE, 0);
     gtk_widget_show (frame);
 
-    hbox = gtk_hbox_new(FALSE, 8);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
     gtk_container_add(GTK_CONTAINER(bin), hbox);
     gtk_widget_show(hbox);
 
