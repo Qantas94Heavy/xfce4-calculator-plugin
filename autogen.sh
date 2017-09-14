@@ -28,6 +28,6 @@ EOF
 # substitute revision and linguas
 linguas=`sed -e '/^#/d' po/LINGUAS`
 sed -e "s/@LINGUAS@/${linguas}/g" \
-    < "configure.in.in" > "configure.in"
+    < "configure.ac.in" > "configure.ac"
 
 exec xdt-autogen $@
