@@ -286,7 +286,7 @@ static void calc_orientation_changed(XfcePanelPlugin *plugin,
                                      GtkOrientation orientation,
                                      CalcPlugin *calc)
 {
-    xfce_hvbox_set_orientation(XFCE_HVBOX(calc->hvbox), orientation);
+    gtk_orientable_set_orientation(GTK_ORIENTABLE(calc->hvbox), orientation);
 }
 
 
