@@ -37,12 +37,14 @@ xfce4_calculator_plugin_CFLAGS =					\
 	$(LIBXFCE4UTIL_CFLAGS)						\
 	$(LIBXFCE4UI_CFLAGS)						\
 	$(LIBXFCE4PANEL_CFLAGS)						\
+	$(GTK_CFLAGS)							\
 	$(PLATFORM_CFLAGS)
 
 xfce4_calculator_plugin_LDADD =						\
 	$(LIBXFCE4UTIL_LIBS)						\
 	$(LIBXFCE4UI_LIBS)						\
-	$(LIBXFCE4PANEL_LIBS)
+	$(LIBXFCE4PANEL_LIBS)						\
+	$(GTK_LIBS)
 
 calctest_CFLAGS = $(xfce4_calculator_plugin_CFLAGS)
 calctest_LDADD = $(xfce4_calculator_plugin_LDADD)

@@ -39,13 +39,11 @@ AC_PROG_CC()
 AC_PROG_CC_C99()
 AC_PROG_LD()
 AC_PROG_INSTALL()
-AC_PROG_INTLTOOL()
-
-AC_CHECK_LIB([m], [exp])
-
-dnl Initialize libtool
 LT_PREREQ([2.4])
 LT_INIT([disable-static])
+IT_PROG_INTLTOOL([0.35.0])
+
+AC_CHECK_LIB([m], [exp])
 
 dnl **********************************
 dnl *** Check for standard headers ***
@@ -70,7 +68,7 @@ XDT_CHECK_LIBX11_REQUIRE()
 dnl ***********************************
 dnl *** Check for required packages ***
 dnl ***********************************
-XDT_CHECK_PACKAGE([GTK], [gtk+-2.0], [2.6.0])
+XDT_CHECK_PACKAGE([GTK], [gtk+-3.0], [3.20.0])
 XDT_CHECK_PACKAGE([LIBXFCE4UI], [libxfce4ui-1], [4.8.0])
 XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.8.0])
 XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-1.0], [4.8.0])
